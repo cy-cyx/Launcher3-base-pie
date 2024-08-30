@@ -16,10 +16,10 @@
 package com.android.launcher3.views;
 
 import static android.content.Context.ACCESSIBILITY_SERVICE;
-import static android.support.v4.graphics.ColorUtils.compositeColors;
-import static android.support.v4.graphics.ColorUtils.setAlphaComponent;
 import static android.view.MotionEvent.ACTION_DOWN;
 
+import static androidx.core.graphics.ColorUtils.compositeColors;
+import static androidx.core.graphics.ColorUtils.setAlphaComponent;
 import static com.android.launcher3.LauncherState.ALL_APPS;
 import static com.android.launcher3.LauncherState.NORMAL;
 import static com.android.launcher3.anim.Interpolators.ACCEL;
@@ -40,10 +40,6 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.view.accessibility.AccessibilityNodeInfoCompat;
-import android.support.v4.view.accessibility.AccessibilityNodeInfoCompat.AccessibilityActionCompat;
-import android.support.v4.widget.ExploreByTouchHelper;
 import android.util.AttributeSet;
 import android.util.Property;
 import android.view.KeyEvent;
@@ -51,6 +47,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.accessibility.AccessibilityManager;
 import android.view.accessibility.AccessibilityManager.AccessibilityStateChangeListener;
+
+import androidx.core.view.ViewCompat;
+import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
+import androidx.customview.widget.ExploreByTouchHelper;
 
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Insettable;
@@ -397,10 +397,10 @@ public class ScrimView extends View implements Insettable, OnChangeListener,
                 Context context = getContext();
                 if (Utilities.isWallpaperAllowed(context)) {
                     node.addAction(
-                            new AccessibilityActionCompat(WALLPAPERS, context.getText(WALLPAPERS)));
+                            new AccessibilityNodeInfoCompat.AccessibilityActionCompat(WALLPAPERS, context.getText(WALLPAPERS)));
                 }
-                node.addAction(new AccessibilityActionCompat(WIDGETS, context.getText(WIDGETS)));
-                node.addAction(new AccessibilityActionCompat(SETTINGS, context.getText(SETTINGS)));
+                node.addAction(new AccessibilityNodeInfoCompat.AccessibilityActionCompat(WIDGETS, context.getText(WIDGETS)));
+                node.addAction(new AccessibilityNodeInfoCompat.AccessibilityActionCompat(SETTINGS, context.getText(SETTINGS)));
             }
         }
 

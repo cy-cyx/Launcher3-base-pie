@@ -17,22 +17,23 @@ package com.android.launcher3.views;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.support.animation.DynamicAnimation;
-import android.support.animation.FloatPropertyCompat;
-import android.support.animation.SpringAnimation;
-import android.support.animation.SpringForce;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.EdgeEffectFactory;
+
 import android.util.AttributeSet;
 import android.util.SparseBooleanArray;
 import android.view.View;
 import android.widget.EdgeEffect;
 import android.widget.RelativeLayout;
 
-import static android.support.animation.SpringForce.DAMPING_RATIO_MEDIUM_BOUNCY;
-import static android.support.animation.SpringForce.STIFFNESS_LOW;
-import static android.support.animation.SpringForce.STIFFNESS_MEDIUM;
+import static androidx.dynamicanimation.animation.SpringForce.DAMPING_RATIO_MEDIUM_BOUNCY;
+import static androidx.dynamicanimation.animation.SpringForce.STIFFNESS_LOW;
+import static androidx.dynamicanimation.animation.SpringForce.STIFFNESS_MEDIUM;
+
+import androidx.dynamicanimation.animation.DynamicAnimation;
+import androidx.dynamicanimation.animation.FloatPropertyCompat;
+import androidx.dynamicanimation.animation.SpringAnimation;
+import androidx.dynamicanimation.animation.SpringForce;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class SpringRelativeLayout extends RelativeLayout {
 
@@ -123,11 +124,11 @@ public class SpringRelativeLayout extends RelativeLayout {
         finishScrollWithVelocity(velocity);
     }
 
-    public EdgeEffectFactory createEdgeEffectFactory() {
+    public RecyclerView.EdgeEffectFactory createEdgeEffectFactory() {
         return new SpringEdgeEffectFactory();
     }
 
-    private class SpringEdgeEffectFactory extends EdgeEffectFactory {
+    private class SpringEdgeEffectFactory extends RecyclerView.EdgeEffectFactory {
 
         @NonNull @Override
         protected EdgeEffect createEdgeEffect(RecyclerView view, int direction) {

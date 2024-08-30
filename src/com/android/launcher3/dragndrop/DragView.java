@@ -39,9 +39,6 @@ import android.graphics.drawable.InsetDrawable;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.animation.FloatPropertyCompat;
-import android.support.animation.SpringAnimation;
-import android.support.animation.SpringForce;
 import android.view.View;
 
 import com.android.launcher3.FastBitmapDrawable;
@@ -71,6 +68,10 @@ import java.util.Arrays;
 import java.util.List;
 
 import static com.android.launcher3.ItemInfoWithIcon.FLAG_ICON_BADGED;
+
+import androidx.dynamicanimation.animation.FloatPropertyCompat;
+import androidx.dynamicanimation.animation.SpringAnimation;
+import androidx.dynamicanimation.animation.SpringForce;
 
 public class DragView extends View {
     private static final ColorMatrix sTempMatrix1 = new ColorMatrix();

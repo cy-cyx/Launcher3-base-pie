@@ -35,7 +35,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Parcelable;
 import android.support.annotation.IntDef;
-import android.support.v4.view.ViewCompat;
 import android.util.ArrayMap;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -45,6 +44,8 @@ import android.view.View;
 import android.view.ViewDebug;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
+
+import androidx.core.view.ViewCompat;
 
 import com.android.launcher3.LauncherSettings.Favorites;
 import com.android.launcher3.accessibility.DragAndDropAccessibilityDelegate;

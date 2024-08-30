@@ -16,8 +16,9 @@
 
 package com.android.launcher3.widget;
 
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.launcher3.IconCache;
 import com.android.launcher3.model.PackageItemInfo;

@@ -27,7 +27,6 @@ import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.v4.graphics.ColorUtils;
 import android.text.TextUtils.TruncateAt;
 import android.util.AttributeSet;
 import android.util.Property;
@@ -38,6 +37,8 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewDebug;
 import android.widget.TextView;
+
+import androidx.core.graphics.ColorUtils;
 
 import com.android.launcher3.IconCache.IconLoadRequest;
 import com.android.launcher3.IconCache.ItemInfoUpdateReceiver;

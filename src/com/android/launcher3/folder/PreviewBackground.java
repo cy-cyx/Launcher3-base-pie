@@ -30,9 +30,10 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.RadialGradient;
 import android.graphics.Region;
 import android.graphics.Shader;
-import android.support.v4.graphics.ColorUtils;
 import android.util.Property;
 import android.view.View;
+
+import androidx.core.graphics.ColorUtils;
 
 import com.android.launcher3.CellLayout;
 import com.android.launcher3.DeviceProfile;

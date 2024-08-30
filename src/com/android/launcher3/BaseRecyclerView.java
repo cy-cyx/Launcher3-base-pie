@@ -17,11 +17,12 @@
 package com.android.launcher3;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.launcher3.views.RecyclerViewFastScroller;
 
@@ -33,7 +34,7 @@ import com.android.launcher3.views.RecyclerViewFastScroller;
  *   <li> Enable fast scroller.
  * </ul>
  */
-public abstract class BaseRecyclerView extends RecyclerView  {
+public abstract class BaseRecyclerView extends RecyclerView {
 
     protected RecyclerViewFastScroller mScrollbar;
 
